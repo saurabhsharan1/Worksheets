@@ -34,7 +34,9 @@ ANSWERS
                 According to the basic definition of IQR outliers, Values less than Q1-1.5IQR and values greater that Q3+1.5IQR are treated as outliers.
 
 
-12 - Both Bagging and Boosting generate several training data sets by random sampling. Bagging gives equal weight to all the data points. But, Boosting determines weights for the data to be over-weight in favour of the data points where prediction accuracy is poor. This leads to bias reduction in Boosting but may lead to over fitting; as compared to Bagging. 
+12 - Both Bagging and Boosting generate several training data sets by random sampling. Bagging gives equal weight to all the data points. But, Boosting determines weights
+     for the data to be over-weight in favour of the data points where prediction accuracy is poor. This leads to bias reduction in Boosting but may lead to over fitting; 
+     as compared to Bagging. 
 
 13 - Adjusted R - squared  is a metric used for goodness of model fit. It is quite literally the Pearson Correlation Coefficient (R) squared. We can think of it 
      as the percent of variability in the dependent variable of our model that is explained by the collection of the independent variables in the model.
