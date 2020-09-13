@@ -1,0 +1,71 @@
+                                          WORKSHEET-1
+
+                                               SQL
+
+ANSWERS 
+
+1. A,D
+
+2. A,B,C
+
+3. B
+
+4. B
+
+5. A
+
+6. C
+
+7. B
+
+8. B
+
+9. B
+
+10. C
+
+11.  A Data Warehouse (DW) is a relational database that is designed for query and analysis rather than transaction processing. It includes historical data derived from transaction data 
+     from single and multiple sources.
+
+     A Data Warehouse provides integrated, enterprise-wide, historical data and focuses on providing support for decision-makers for data modeling and analysis.
+
+     A Data Warehouse is a group of data specific to the entire organization, not only to a particular group of users.
+
+     It is not used for daily operations and transaction processing but used for making decisions.
+
+
+12.  OLTP and OLAP :-
+
+     Online transaction processing (OLTP) captures, stores, and processes data from transactions in real time. It is used for maintaining the online transaction and record integrity in multiple
+     access environments. OLTP is a system that manages very large number of short online transaction for example, ATM.
+
+     Online Analytical Processing (OLAP) uses complex queries to analyze aggregated historical data from OLTP systems.It is used for analysis of database information from multiple database systems
+     at one time such as sales analysis and forecasting, market research, budgeting and etc. Data Warehouse is the example of OLAP system.
+
+
+13. The key characteristics of a data warehouse are as follows:
+
+   - Some data is denormalized for simplification and to improve performance
+
+   - Large amounts of historical data are used
+
+   - Queries often retrieve large amounts of data
+
+   - Both planned and ad hoc queries are common
+
+   - The data load is controlled
+
+    In general, fast query performance with high data throughput is the key to a successful data warehouse.
+
+
+14. A star schema is the elementary form of a dimensional model, in which data are organized into facts and dimensions. A fact is an event that is counted or measured, such as a sale or
+    log in. A dimension includes reference data about the fact, such as date, item, or customer.
+   
+    A star schema is a relational schema where a relational schema whose design represents a multidimensional data model. The star schema is the explicit data warehouse schema. It is known
+    as star schema because the entity-relationship diagram of this schemas simulates a star, with points, diverge from a central table. The center of the schema consists of a large fact table,
+    and the points of the star are the dimension tables.  
+
+15. SETL is a very-high level language with dynamic typing and dynamic data structures, based on the mathematical notion of set. The language introduced a fundamentally new paradigm in programming
+    in which sets, ordered sets and maps are the principal data structures and the programs are expressed in terms of set constructors, set operations, and predicates on sets. It is an abbreviation
+    of ‘SET Language’.
+
