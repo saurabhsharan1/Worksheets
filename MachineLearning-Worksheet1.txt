@@ -1,0 +1,77 @@
+                                     MACHINE LEARNING
+                              
+                                      WORKSHEET - 1
+
+ANSWERS
+
+1 - C
+
+2 - D
+
+3 - C
+
+4 - A
+
+5 - A
+
+6 - B
+
+7 - C
+
+8 - B,C
+
+9 - A,B,D
+
+10 - A,B,D
+
+11 - OUTLIERS - An outlier is an observation that lies an abnormal distance from other values in a random sample from a population. 
+                It is an observation that deviates from overall pattern on a sample.
+
+
+                The interquartile Range(IQR), also called the midspread or middle 50%, or technically H-spread, is a measure of statistical dispersion,
+                being equal to the difference between 75th and 25th percentiles, or between upper and lower quartiles, IQR = Q3-Q1.
+
+                According to the basic definition of IQR outliers, Values less than Q1-1.5IQR and values greater that Q3+1.5IQR are treated as outliers.
+
+
+12 - Both Bagging and Boosting generate several training data sets by random sampling. Bagging gives equal weight to all the data points. But, Boosting determines weights for the data to be over-weight in favour of the data points where prediction accuracy is poor. This leads to bias reduction in Boosting but may lead to over fitting; as compared to Bagging. 
+
+13 - Adjusted R - squared  is a metric used for goodness of model fit. It is quite literally the Pearson Correlation Coefficient (R) squared. We can think of it 
+     as the percent of variability in the dependent variable of our model that is explained by the collection of the independent variables in the model.
+
+     It’s a pretty good metric, but one of the biggest cons is that no matter how useful the independent variable, adding it to our model will increase  R2 . 
+     We can add a completely useless independent variable and the value will go up. We can also be prone to overfit our model.
+
+    The adjusted  R2  is essentially regularized to compensate for this problem. It balances the  R2  value by the number of data points and independent variables
+    in the model. If we add a useful independent variable, the adjusted  R2  will go up. If we add a useless independent variable, the adjusted  R2  will go down.
+    Here’s the formula:
+
+    Adjusted  R2=1−[(1−R2)(n−1)/(n−k−1)] 
+
+    where n is the number of data points and k is the number of independent variables.
+
+
+14. The terms standardization and normalization are sometimes used interchangeably, but they usually refer to different things.
+
+    Standardization transforms data to have a mean of zero and a standard deviation of 1.
+
+    Normalization usually means to scale a variable to have a values between 0 and 1.
+
+
+
+15.  Cross-validation - Cross-validations are techniques to measure generalization capacity of any regression against over-fitting or other limitations by comparing several statistical models,
+                        which can further be used for better regression by ensemble average.
+
+    
+     Advantage of Cross-validation - When we use cross-validation in machine learning, we verify how accurate our model is on multiple and different subsets of data. Therefore, we ensure that
+                                     it generalizes well to the data that we collect in the future. It improves the accuracy of the model.
+
+                                    -More accurate estimate of out-of-sample accuracy.More "efficient" use of data as every observation i used for both training and testing.
+
+    
+     Disadvantage of Cross-validation - The disadvantage of this method is that the training algorithm has to be rerun from scratch k times, which means it takes k times as
+                                        much computation to make an evaluation. A variant of this method is to randomly divide the data into a test and training set k 
+                                        different times. 
+
+                                  
+
