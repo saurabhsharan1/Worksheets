@@ -1,0 +1,373 @@
+                                                                            MACHINE LEARNING – WORKSHEET 3
+
+                                                                                         ANSWERS
+
+
+1. SVM Kernels - The SVM algorithm is implemented in practice using a kernel.A kernel transforms an input data space
+                into the required form. SVM uses a technique called the kernel trick.Here, the kernel takes a low-
+                dimensional input space and transforms it into a higher dimensional space.In other words, we can say
+                that it converts nonseparable problem to separable problems by adding more dimension to it.It is most
+                useful in non-linear separation problem.Kernel trick helps us to build a more accurate classifier.
+
+
+
+  * Linear Kernel - A linear kernel can be used as normal dot product any two given obervations.The product between two
+    vectors is the sum of the multiplication of each pair of input values.
+
+    K(x, xi) = sum(x * xi)
+
+
+  * Radial Basis Function Kernel - The Radial basis function kernel is a popular kernel function commonly used in support
+    vector machine classification. RBF can map an input space in infinite dimensional space.
+
+    K(x, xi) = exp(-gamma * sum((x - xi^2))
+
+    Here gamma is a parameter, which ranges from 0 to 1. A higher value of gamma will perfectly fit the training dataset, 
+    which causes over-fitting.Gamma=0.1 is considered to be good default value.The value of gamma needs to be manually 
+    specified in the learning algorithm.
+
+
+  * Polynomial Kernel - A polynomial kernel is a more generalized form of the linear kernel.The polynomial kernel can 
+    distinguish curved or nonlinear input space.
+
+    K(x, xi) = 1 + sum(x * xi)^d
+    
+    Where d is the degree of the polynomial. d=1 is similar to the linear transformation.The degree needs to be manually
+    specified in the learning algorithm.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+2.  R-squared.
+
+    R-squared represents the portion of variance in data which is explained by the model. Closer is the value to 1, better is the fit.
+
+    RSS is sum of squared distances between actual and predicted values. RSS value depends on the scale of the variable and is not very informative on a stand alone basis.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+3   * The total sum of squares (TSS or SST) is a quantity that appears as part of a standard way of presenting results of such analyses. 
+      For a set of observations y_i, i<=n, it is defined as the sum over all squared differences between the observations and their overall mean y.
+
+             n          
+      TSS =  Σ(y_i - y)^2 .
+             i=1        
+
+   *  The explained sum of squares (ESS), alternatively known as the model sum of squares or sum of squares due to regression ("SSR" – not to be confused with the residual sum of squares RSS or sum 
+      of squares of errors), is a quantity used in describing how well a model, often a regression model, represents the data being modelled. In particular, the explained sum of squares measures how
+      much variation there is in the modelled values and this is compared to the total sum of squares ( TSS ), which measures how much variation there is in the observed data, and to the residual sum 
+      of squares, which measures the variation in the error between the observed data and modelled values.
+
+
+      The explained sum of squares (ESS) is the sum of the squares of the deviations of the predicted values from the mean value of a response variable, in a standard regression model 
+    
+      for example, yi = a + b1x1i + b2x2i + ... + εi, where yi is the i th observation of the response variable, xji is the i th observation of the j th explanatory variable, a and bj 
+      are coefficients, i indexes the observations from 1 to n, and εi is the i th value of the error term. 
+      In general, the greater the ESS, the better the estimated model performs.
+
+      If 'a' and 'b_i' are the estimated coefficients, then 
+
+      y_i = a + b_1 * x_1i + b_2 * x_2i + ....
+
+      is the 'i'th predicted value of the response variable.The ESS is then:
+
+          n                  
+      ESS = Σ(y_i - y)^2 .
+          i=1            
+
+     where y_i the value estimated by the regression line.
+
+     In some cases (see below): total sum of squares ( TSS ) = explained sum of squares (ESS)+ residual sum of squares (RSS).
+
+
+   * The residual sum of squares (RSS), also known as the sum of squared residuals (SSR) or the sum of squared estimate of errors (SSE), is the sum of the squares of residuals 
+     (deviations predicted from actual empirical values of data). It is a measure of the discrepancy between the data and an estimation model. A small RSS indicates a tight fit 
+     of the model to the data. It is used as an optimality criterion in parameter selection and model selection.
+    
+     In general, total sum of squares = explained sum of squares + residual sum of squares.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+4. Gini index or Gini impurity measures the degree or probability of a particular variable being wrongly classified when it is randomly chosen. 
+   But what is actually meant by ‘impurity’? If all the elements belong to a single class, then it can be called pure. The degree of Gini index 
+   varies between 0 and 1, where 0 denotes that all elements belong to a certain class or if there exists only one class, and 1 denotes that the
+   elements are randomly distributed across various classes. A Gini Index of 0.5 denotes equally distributed elements into some classes.
+
+   The formula for calculating the gini impurity of a data set or feature is as follows:
+
+           J
+   G(k) =  Σ P(i) * (1 - P(i))
+           i=1
+
+   Where P(i) is the probability of a certain classification i, per the training data set.
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+5.  Unregularized decision-trees prone to overfitting :-
+
+    * Unregularized decision trees are prone to overfitting, especially when a tree is particularly deep. 
+
+      This is because due to the amount of specificity we look at leading to smaller sample of events that meet the previous assumptions. This small sample could lead to unsound conclusions.
+    
+    * How prone they are to overfitting depends on our stopping rule and our pruning rule. 
+
+      But, in general, they are prone to this because they are very data intensive - that is, they examine the data in a lot of ways. At each node, they look at every possible split of every 
+      independent variable (sometimes they impose a rule of monotonicity - if the variable is continuous or ordinal).
+
+      Even with a relatively small number of variables, that can be a lot of things to examine, especially if one of them is a categorical variable with more than a few levels. For instance,
+      suppose we have a data set on voting in the USA. Suppose one variable is state - with 50 levels. There are  2^50 ≈ 1.1 * 1015  ways to split the data. That’s more than all the people on 
+      Earth, much less voters in the USA, much less whatever sample we have.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+6. * Ensemble methods are techniques that create multiple models and then combine them to produce improved results. Ensemble methods usually produces
+     more accurate solutions than a single model would. This has been the case in a number of machine learning competitions, where the winning solutions
+     used ensemble methods. 
+
+   * Ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning 
+     algorithms alone. Unlike a statistical ensemble in statistical mechanics, which is usually infinite, a machine learning ensemble consists of only a concrete 
+     finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives.
+
+   * Ensemble learning is a machine learning paradigm where multiple methods (often called weak learners) are trained to solve the same. The main hypothesis is that
+     when eak models are correctly combined.We can obtain more accurate and/ or robust models.
+
+   * So inside the ensemble techniques basically, ensemble multiple weak learners into the one unit make them boosted, amplify their learning and then come to the 
+     resultant.
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+7. Difference between Bagging and Boosting Techniques :- 
+
+   * Bagging and boosting are both ensemble learning methods in machine learning.
+
+   * Bagging and boosting are similar in that they are both ensemble techniques, where 
+     a set of weak learners are combined to create a strong learner that obtains better
+     performance than a single one.
+
+   * Ensemble learning helps to improve machine learning model performance by combining several models.
+     This approach allows the production of better predictive performance compared to a single model.
+
+   * The basic idea behind ensemble learning is to learn a set of classifiers (experts) and to allow them to vote.
+     This diversification in Machine Learning is achieved by a technique called ensemble learning. The idea here 
+     is to train multiple models, each with the objective to predict or classify a set of results.
+
+   * Bagging and boosting are two types of ensemble learning techniques. These two decrease the variance of single estimate
+     as they combine several estimates from different models. So the result may be a model with higher stability.
+   
+   * The main causes of error in learning are due to noise, bias and variance. Ensemble helps to minimize these factors. 
+     By using ensemble methods, we’re able to increase the stability of the final model and reduce the errors mentioned previously.
+
+   * Bagging helps to decrease the model’s variance.
+
+   * Boosting helps to decrease the model’s bias.
+
+   * Bagging ( or Bootstrap Aggregation), is a simple and very powerful ensemble method. Bagging is the application of the Bootstrap 
+     procedure to a high-variance machine learning algorithm, typically decision trees. The idea behind bagging is combining the results
+     of multiple models (for instance, all decision trees) to get a generalized result. Bagging (or Bootstrap Aggregating) technique uses
+     these subsets (bags) to get a fair idea of the distribution (complete set). The size of subsets created for bagging may be less than 
+     the original set.
+
+   * Boosting is a sequential process, where each subsequent model attempts to correct the errors of the previous model. The succeeding models 
+     are dependent on the previous model.In this technique, learners are learned sequentially with early learners fitting simple models to the 
+     data and then analyzing data for errors. In other words, we fit consecutive trees (random sample) and at every step, the goal is to solve 
+     for net error from the prior tree.When an input is misclassified by a hypothesis, its weight is increased so that next hypothesis is more 
+     likely to classify it correctly. By combining the whole set at the end converts weak learners into better performing model.
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+8. * Out-of-bag (OOB) error, also called out-of-bag estimate, is a method of measuring the prediction error of random forests, boosted decision trees, and other machine learning 
+     models utilizing bootstrap aggregating (bagging) to sub-sample data samples used for training. OOB is the mean prediction error on each training sample xᵢ, using only the 
+     trees that did not have xᵢ in their bootstrap sample.
+
+     Subsampling allows one to define an out-of-bag estimate of the prediction performance improvement by evaluating predictions on those observations which were not used in the 
+     building of the next base learner.
+
+   * The RandomForestClassifier is trained using bootstrap aggregation, where each new tree is fit from a bootstrap sample of the training observations z_i = (x_i, y_i).
+     The out-of-bag (OOB) error is the average error for each z_i calculated using predictions from the trees that do not contain z_i in their respective bootstrap sample. 
+     This allows the RandomForestClassifier to be fit and validated whilst being trained.
+
+   * When we train each tree in random forest, we will not use all the samples. So for each bag, those unused samples can be used to find the prediction error for that particular bag. 
+     The OOB error rate can then be obtained by averaging the prediction error from all the bags.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+9.   Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.
+
+     The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. 
+     As such, the procedure is often called k-fold cross-validation. When a specific value for k is chosen, it may be used in place
+     of k in the reference to the model, such as k=10 becoming 10-fold cross-validation.
+
+     Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. 
+     That is, to use a limited sample in order to estimate how the model is expected to perform in general when used to make predictions
+     on data not used during the training of the model.
+
+     It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate
+     of the model skill than other methods, such as a simple train/test split.
+
+     The general procedure is as follows:
+
+
+     - Shuffle the dataset randomly.
+     - Split the dataset into k groups
+     - For each unique group:
+
+         * Take the group as a hold out or test data set
+         * Take the remaining groups as a training data set
+         * Fit a model on the training set and evaluate it on the test set
+         * Retain the evaluation score and discard the model
+     
+     - Summarize the skill of the model using the sample of model evaluation scores
+
+     Importantly, each observation in the data sample is assigned to an individual group and stays in that group for the duration of the procedure.
+     This means that each sample is given the opportunity to be used in the hold out set 1 time and used to train the model k-1 times. 
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+10. In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. A hyperparameter is a parameter whose
+    value is used to control the learning process. By contrast, the values of other parameters (typically node weights) are learned.
+
+    The same kind of machine learning model can require different constraints, weights or learning rates to generalize different data patterns. These measures are called hyperparameters, 
+    and have to be tuned so that the model can optimally solve the machine learning problem. 
+
+    Hyperparameter optimization finds a tuple of hyperparameters that yields an optimal model which minimizes a predefined loss function on given independent data.
+    The objective function takes a tuple of hyperparameters and returns the associated loss.
+
+    Cross-validation is often used to estimate this generalization performance.
+
+    In machine learning, hyperparameter tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm.
+
+    A model hyperparameter is a configuration that is external to the model and whose value cannot be estimated from data. As a data scientist(or machine learning practitioner, whatever the 
+    name it is), model hyperparameters are unknown to us.
+
+    We can only find the optimum values based on the default values given, rules of thumb, or trial and error by searching around the discrete space of hyperparameters.
+    Some of the hyperparameters are the learning rate for training a neural network, C and sigma values for Support Vector Machine (SVM), or the k value in k-nearest neighbours (KNN).
+
+    Hyperparameters are crucial as they control the overall behaviour of a machine learning model. The ultimate goal is to find an optimal combination of hyperparameters that minimizes a 
+    predefined loss function to give better results.Failure to do so would give sub-optimal results as the model didn’t converge and minimize the loss function effectively.
+
+    It’s like exploring a range of possibilities and trying to locate the best combination that gives you the best results. Some of the common techniques used to tune hyperparameters include
+    Grid Search, Random Search, Bayesian Optimization and others.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+11. When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error When the learning rate is too small, training is not only slower, 
+    but may become permanently stuck with a high training error.
+
+    The learning rate scales down the gradient before it is passed for weight updation.
+
+    - Learning rate to high like 0.5 or 0.7. In this case the major portion of gradient of current sample or current batch will be used for weight updation. Now for the next batch or sample 
+      again the new gradient will be generated which is different then the previous one and the major portion (as the learning rate is high as 0.5) is going to be used for weight updation. 
+      There are good chances that the weight updation caused by previous gradient may adversely get affected by this current gradient (due to the chances that the gradient might be of opposite direction). 
+      And due to all this the learning wont happen and network keeps on learning from the recent examples rather than generalizing.
+
+    - If the gradient of current sample or current batch is very low as 0.00001 or 0.0001 then very small portion of the gradient will be used for weighr updation. Due to that the learning from current 
+      batch or sample will be very less. The same will happen for the next batches or samples. And at the end the network learns very slowly. It requires many no. of epochs to learn the pattern.
+
+    - The ideal learning rate will be a mystry to be solved using trial and error. But it will be around 0.001 scale or around 0.01 scale depending on the network and optimizer.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+12. * The bias-variance tradeoff is a central problem in supervised learning. Ideally, one wants to choose a model that both accurately captures the regularities in its training data, 
+      but also generalizes well to unseen data.
+
+      Unfortunately, it is typically impossible to do both simultaneously.
+
+      High-variance learning methods may be able to represent their training set well, but are at risk of overfitting to noisy or unrepresentative training data.
+
+      In contrast, algorithms with high bias typically produce simpler models that don't tend to overfit, but may underfit their training data, failing to capture 
+      important regularities.
+
+    * The bias–variance tradeoff is the property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the
+      parameter estimates across samples, and vice versa. The bias–variance dilemma or bias–variance problem is the conflict in trying to simultaneously minimize these 
+      two sources of error that prevent supervised learning algorithms from generalizing beyond their training set.
+
+      - The bias error is an error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features
+        and target outputs (underfitting).
+      
+      - The variance is an error from sensitivity to small fluctuations in the training set. High variance can cause an algorithm to model the random noise in the training data,
+        rather than the intended outputs (overfitting). 
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+13.  Regularization
+
+     This is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning 
+     a more complex or flexible model, so as to avoid the risk of overfitting.
+
+     A simple relation for linear regression looks like this. Here Y represents the learned relation and β represents the coefficient estimates for different variables or predictors(X).
+
+     Y ≈ β0 + β1X1 + β2X2 + …+ βpXp
+
+     The fitting procedure involves a loss function, known as residual sum of squares or RSS. The coefficients are chosen, such that they minimize this loss function.
+     
+
+     
+            n              p      
+     RSS =  Σ(y_i - β_0 -  Σ β_i * x_ij)^2
+            i=1            j=1
+
+     Now, this will adjust the coefficients based on your training data. If there is noise in the training data, then the estimated coefficients won’t generalize well to the future data. 
+     This is where regularization comes in and shrinks or regularizes these learned estimates towards zero.
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+14. * AdaBoost stands for Adaptive Boosting. The basic idea of boosting (an ensemble learning technique) is to combine several weak learners into a stronger one. 
+      The general idea of boosting algorithms is to try predictors sequentially,where each subsequent model attempts to fix the errors of its predecessor.
+
+    * In Adaboost, ‘shortcomings’ are identified by high-weight data points.
+
+    * In Gradient Boosting, ‘shortcomings’ (of existing weak learners) are identified by gradients.
+
+    * Adaboost is more about ‘voting weights’ and Gradient boosting is more about ‘adding gradient optimization’. 
+      Adaboost increases the accuracy by giving more weightage to the target which is misclassified by the model. 
+      At each iteration, Adaptive boosting algorithm changes the sample distribution by modifying the weights attached to each of the instances. 
+      It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances.
+
+    * Gradient boosting calculates the gradient (derivative) of the Loss Function with respect to the prediction (instead of the features). 
+      Gradient boosting increases the accuracy by minimizing the Loss Function (error which is difference of actual and predicted value) and 
+      having this loss as target for the next iteration.
+
+      Gradient boosting algorithm builds first weak learner and calculates the Loss Function. It then builds a second learner to predict the loss after the first step. 
+      The step continues for third learner and then for fourth learner and so on until a certain threshold is reached.
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+15. No, we cannot use Logistic Regression for classification for Non-Linear Data.
+    
+    Logistic Regression has traditionally been used as a linear classifier, i.e. when the classes can be separated in the feature space by linear boundaries. 
+    That can be remedied however if we happen to have a better idea as to the shape of the decision boundary.
+
+    Logistic regression is known and used as a linear classifier. It is used to come up with a hyperplane in feature space to separate observations that belong 
+    to a class from all the other observations that do not belong to that class. The decision boundary is thus linear. Robust and efficient implementations are
+    readily available (e.g. scikit-learn) to use logistic regression as a linear classifier.
+
+    While logistic regression makes core assumptions about the observations such as IID (each observation is independent of the others and they all have an identical 
+    probability distribution), the use of a linear decision boundary is not one of them.
+
+    The linear decision boundary is used for reasons of simplicity following the Zen mantra — when in doubt simplify. In those cases where we suspect the decision boundary
+    to be nonlinear, it may make sense to formulate logistic regression with a nonlinear model and evaluate how much better we can do. That is what this post is about. 
+    Here is the outline.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
