@@ -1,0 +1,87 @@
+                                                                                              WORKSHEET-3
+                                                                                                 SQL
+                                                                                               ANSWERS
+
+
+
+1.
+
+CREATE TABLE IF NOT EXISTS Customers(
+   customerNumber int not null primary key,
+   customerName varchar(255),
+   contactLastName varchar(255),
+   contactFirstName varchar(255),
+   phone bigint,
+   addressLine1 varchar(255),
+   addressLine2 varchar(255),
+   city varchar(255),
+   state varchar(255),
+   postalCode int,
+   country varchar(255),
+   salesRepEmployeeNumber int,
+   creditLimit int
+)
+
+2. 
+
+CREATE TABLE IF NOT EXISTS Orders(
+   orderNumber int not null primary key,
+   orderDate date,
+   requiredDate date,
+   shippedDate date,
+   status varchar(255),
+   comments varchar(255),
+   customerNumber int not null,
+   FOREIGN KEY (customerNumber) REFERENCES Customers(customerNumber)
+)
+
+3. select * from Orders;
+
+4. select comments from Orders;
+
+5. select orderdate, count(orderNumber) from Orders group by orderDate;
+
+6. Select employeeNumber, lastName, firstName from employees;
+
+7. Select o.orderNumber, c.customerName from Customers c join Orders o 
+on o.customerNumber = c.customerNumber;
+
+8. Select c.customerName, CONCAT(e.firstName,' ',e.lastName) as name from Customers c join Employees e on e.employeeNumber=c.salesRepEmployeeNumber;
+
+9. Select paymentDate, sum(amount) from Orders group by paymentDate;
+
+10. Select productName, MSRP, productDescription from products;
+
+11. SELECT o.productCode, p.productName, p.productDescription
+FROM OrderDetails AS o INNER JOIN Products AS p ON o.productCode = p.productCode
+GROUP BY o.productCode
+ORDER BY SUM(o.quantityOrdered) DESC
+LIMIT 1;
+
+12. Select c.city 
+from Customers c join Orders o on c.customerNumber = o.orderNumber 
+group by city 
+order by Count(o.orderNumber) DESC
+LIMIT 1;
+
+13. Select state from customers 
+group by state
+order by count(customerNumber) DESC
+LIMIT 1;
+
+14. Select employeeNumber, CONCAT(e.firstName,' ',e.lastName) as fullName from employees;
+
+15. select od.orderNumber as orderNumber,cs.customerName as customer_Name,(od.quantityOrdered × od.priceEach) as total_amount_paid
+    from orderdetails od
+    join orders o on od.orderNumber=o.orderNumber
+    join customers cs on o.customer_number=cs.customer_number
+    group by c.customer_number     
+
+
+    or,
+
+    Select o.orderNumber, c.customerName, (od.quantityOrdered * od.priceEach) as amount from Customers c, Orders o, OrderDetails od
+    where c.customerNumber = o.customerNumber and o.orderNumber = od.orderNumber;
+
+
+
