@@ -1,0 +1,172 @@
+                                                                                     MACHINE LEARNING – WORKSHEET 2
+                                                                                                ANSWERS
+
+
+1. (C) High R-squared value for train-set and Low R-squared value for test-set.
+
+2. (B) Decision trees are highly prone to overfitting
+
+3. (C) Random Forest
+
+4. (A) Accuracy
+
+5. (B) Model B
+
+6. (A) Ridge
+
+7. (B) Decision Tree
+   (C) Random Forest
+
+8. (A) Pruning
+   (C) Restricting the max depth of the tree
+
+9. (A) We initialize the probabilities of the distribution as 1/n, where n is the number of data-points
+   (B) A tree in the ensemble focuses more on the data points on which the previous tree was not performing well
+
+10. Both R2 and the adjusted R2 give an idea of how many data points fall within the line of the regression equation. However, there is one main difference between R2 and the adjusted R2: 
+    R2 assumes that every single variable explains the variation in the dependent variable. The adjusted R2 describe the percentage of variation explained by only the independent variables 
+    that actually affect the dependent variable.
+
+    The adjusted R2 will penalize for adding independent variables (K in the equation) that do not fit the model. Why? In regression analysis, it can be tempting to add more variables to the data. 
+    Some of those variables will be significant, but it can’t be sure that the significance is just by chance. The adjusted R2 will compensate for this by that penalizing for those extra variables.
+
+    While values are usually positive, they can be negative as well. This could happen if R2 is zero; After the adjustment, the value can dip below zero. This usually indicates that the model is a  
+    poor fit for data. Other problems with the model can also cause sub-zero values, such as not putting a constant term in our model.
+
+
+11. In Ridge regression, we estimate the coefficients by trying to minimize the sum of squares of errors (this focuses on prediction accuracy, just like normal multiple linear regression) with the 
+    constraint that the sum of the squares of the coefficients is less than a certain value (this constraint forms the L2 Norm and keeps the coefficients from growing large). The constraint, in other words,
+    penalizes the coefficients. When we dive deeper into Ridge regression, we will see that L2 regularization doesn't necessarily push the coefficients to zero. What this means is that Ridge regression is 
+    useful in reducing or preventing overfitting, but may not really help with model parsimony or with feature selection.
+
+
+    In Lasso regression, what changes is that the constraint is now to keep the sum of the absolute values of the coefficients less than a certain value. Just like in Ridge regression, the constraint penalizes 
+    the coefficients and keeps them from growing large, thus reducing or preventing overfitting. However, when we dive into the mathematics, we'll see that Lasso, compared to Ridge, can actually push the coefficients
+    to zero, thereby removing variables / features from the model, thus achieving model parsimony and feature selection as well.
+
+
+12. A variance inflation factor(VIF) detects multicollinearity in regression analysis. Multicollinearity is when there’s correlation between predictors (i.e. independent variables) in a model; it’s presence can adversely 
+    affect our regression results. The VIF estimates how much the variance of a regression coefficient is inflated due to multicollinearity in the model.
+
+    Variance inflation factors range from 1 upwards. The numerical value for VIF tells us (in decimal form) what percentage the variance (i.e. the standard error squared) is inflated for each coefficient. For example, a VIF
+    of 1.9 tells that the variance of a particular coefficient is 90% bigger than what we would expect if there was no multicollinearity — if there was no correlation with other predictors.
+    A rule of thumb for interpreting the variance inflation factor:
+ 
+    * 1 = not correlated.
+
+    * Between 1 and 5 = moderately correlated.
+
+    * Greater than 5 = highly correlated
+
+    Exactly how large a VIF has to be before it causes issues is a subject of debate. What is known is that the more our VIF increases, the less reliable our regression results are going to be. In general, a VIF above 10 indicates
+    high correlation and is cause for concern. 
+
+    ometimes a high VIF is no cause for concern at all. For example, we can get a high VIF by including products or powers from other variables in our regression, like x and x2. If we have high VIFs for dummy variables representing
+    nominal variables with three or more categories, those are usually not a problem.
+
+
+
+13.  To skewed the data, to make the data more standarized so that the model will well and all the data will comes under normal distribution with mean =0 and standard deviation =1.
+     
+     Standard scaling means what like basically there is a technique of standard scaling just to make the data normalized normal distribution data.
+
+     The ideal definition of standard scaling is mean =0 and standard deviation =1. So whatever the value of the dataset is there, we do standard scale the data so that all the data will come under the 
+     normal distribution where mean =0 and standard deviation =1 because less the standard deviation, more the model will learn and more better the model will predict. It means if the value are here between
+     mean =0 and standard deviation =1, then the model will predict more better and if the standard deviation is too high then model prediction will also very high. So here there is a technique "Standard scaling"
+     which will scale the data to the normal distribution side where it will make the data mean =0 and standard deviation =1.
+
+    It is a kind of improved data which model will learn well and model will perform well onto the standard scale data and that's why we need to scale the data before feeding it to the train the model.
+
+
+14. The different metrics which are used to check the goodness of fit in linear regression : -
+
+    1. R-squared (R2), which is the proportion of variation in the outcome that is explained by the predictor variables. In multiple regression models, R2 corresponds to the squared correlation between the observed outcome values and 
+       the predicted values by the model. The Higher the R-squared, the better the model.
+
+    2. Root Mean Squared Error (RMSE), which measures the average error performed by the model in predicting the outcome for an observation. Mathematically, the RMSE is the square root of the mean squared error (MSE), which is the average
+       squared difference between the observed actual outome values and the values predicted by the model. So, MSE = mean((observeds - predicteds)^2) and RMSE = sqrt(MSE). The lower the RMSE, the better the model.
+
+    3. Residual Standard Error (RSE), also known as the model sigma, is a variant of the RMSE adjusted for the number of predictors in the model. The lower the RSE, the better the model. In practice, the difference between RMSE and RSE is
+       very small, particularly for large multivariate data.
+
+    4. Mean Absolute Error (MAE), like the RMSE, the MAE measures the prediction error. Mathematically, it is the average absolute difference between observed and predicted outcomes, MAE = mean(abs(observeds - predicteds)). MAE is less 
+       sensitive to outliers compared to RMSE.
+
+   The problem with the above metrics, is that they are sensible to the inclusion of additional variables in the model, even if those variables dont have significant contribution in explaining the outcome. Put in other words, including 
+   additional variables in the model will always increase the R2 and reduce the RMSE. So, we need a more robust metric to guide the model choice.
+
+   Concerning R2, there is an adjusted version, called Adjusted R-squared, which adjusts the R2 for having too many variables in the model.
+
+   Additionally, there are four other important metrics - AIC, AICc, BIC and Mallows Cp - that are commonly used for model evaluation and selection. These are an unbiased estimate of the model prediction error MSE. The lower these metrics,
+   the better the model.
+
+
+    1. AIC stands for (Akaike’s Information Criteria), a metric developped by the Japanese Statistician, Hirotugu Akaike, 1970. The basic idea of AIC is to penalize the inclusion of additional variables to a model. It adds a penalty that 
+       increases the error when including additional terms. The lower the AIC, the better the model.
+
+    2. AICc is a version of AIC corrected for small sample sizes.
+
+    3. BIC (or Bayesian information criteria) is a variant of AIC with a stronger penalty for including additional variables to the model.
+
+    4. Mallows Cp: A variant of AIC developed by Colin Mallows.
+
+  Generally, the most commonly used metrics, for measuring regression model quality and for comparing models, are: Adjusted R2, AIC, BIC and Cp.
+
+
+15. Lets say, True Positive =  TP
+              False Negative = FN
+              False Positive = FP
+              True Negative = TN
+
+
+   So Now,
+     
+          * Sensitivity = TP/(TP + FN )
+
+                        = 1000/ (1000 + 50 )
+                      
+                        = 1000/1050
+
+                        = 0.9523
+
+
+
+          * Specificity = TN/ (FP + TN )
+
+                        = 1200/ (250 + 1200)
+
+                        = 1200/1450
+
+                        = 0.8275
+
+
+          * Precision = TP/ (TP + FP )
+
+                      = 1000/ (1000 + 250 )
+
+                      = 1000/1250
+
+                      = 0.8
+
+
+          *  Recall   = TP/(TP + FN )
+
+                       = 1000/ (1000 + 50 )
+                      
+                       = 1000/1050
+
+                       = 0.9523
+
+
+          * Accuracy = ( TP + TN )/ ( TP + FN + FP + TN )
+
+                     = ( 1000 + 1200 ) / ( 1000 + 50 + 250 + 1200 )
+
+                     = 2200/2500
+
+                     = 0.88
+
+
+
+
+
