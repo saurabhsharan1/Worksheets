@@ -1,0 +1,26 @@
+                                                                                     WORKSHEET-1
+                                                                                        PYTHON
+                                                                                        
+                                                                                       ANSWERS
+
+1. (C) %
+
+2. (B) 0
+
+3. (C) 24
+
+4. (A) 2
+
+5. (D) 16
+
+6. (C) the finally block will be executed no matter if the try block raises an error or not. 
+
+7. (A) It is used to raise an exception
+
+8. (C) in defining a generator
+
+9. (A) _abc
+   (C) abc2
+
+10.(A) yield
+   (B) raise
