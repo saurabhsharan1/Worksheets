@@ -1,0 +1,152 @@
+                                                                                   MACHINE LEARNING – WORKSHEET 4
+
+                                                                                                 ANSWERS
+
+
+
+1. (A) GridSearchCV()
+
+2. (A) Random forest
+
+3. (B) The regularization will decrease
+
+4. (C) both A & B
+
+5. (A) It's an ensemble of weak learners.
+
+6. (A) Gradient Descent algorithm can diverge from the optimal solution.
+
+7. (B) Bias will decrease, Variance increase
+
+10. The advantages of Random Forests over Decision Tree :-
+
+    * Briefly, although decision trees have a low bias / are non-parametric, they suffer from a high variance which makes them less useful for most practical applications.
+
+    * By aggregating multiple decision trees, one can reduce the variance of the model output significantly, thus improving performance. While this could be archived by simple 
+      tree bagging, the fact that each tree is build on a bootstrap sample of the same data gives a lower bound on the variance reduction, due to correlation between the individual trees.
+
+    * Random Forest addresses this problem by sub-sampling features, thus de-correlating the trees to a certain extend and therefore allowing for a greater variance reduction / increase 
+      in performance.
+
+11. The need of scaling all numerical features in a dataset : -
+
+    *  It is a step of Data Pre Processing which is applied to independent variables or features of data. It basically helps to normalise the data within a particular range. Sometimes, it also
+       helps in speeding up the calculations in an algorithm.
+
+    *  To skewed the data, to make the data more standarized so that the model will learn well and all the data will comes under normal distribution with mean =0 and standard deviation =1.
+
+    *  Scaling is required to rescale the data and it’s used when we want features to be compared on the same scale for our algorithm. And, when all features are in the same scale, it also 
+       helps algorithms to understand the relative relationship better.
+
+    Techniques which are used for scaling : -
+
+    * Minmax scaler - In minmax scaler, for each feature, each value is subtracted by the minimum value of the respective feature and then divide by the range of original maximum and minimum 
+                      of the same feature. It has a default range between [0,1].
+
+    * RobustScaler -  RobustScaler can be used when data has high outliers and we want to subside their effects. But unimportant outliers should be removed in the first place. RobustScaler subtracts the column’s 
+                      median and divides by the interquartile range.
+
+    * StandardScaler - StandardScaler rescales each column to have 0 mean and 1 Standard Deviation. It standardizes a feature by subtracting the mean and dividing by the standard deviation. If the original distribution 
+                       is not normally  distributed, it may distort the relative space among the features.
+
+
+
+
+12.   Gradient descent is an optimization algorithm used to find the values of parameters (coefficients) of a function (f) that minimizes a cost function (cost).
+    
+      Gradient descent is best used when the parameters cannot be calculated analytically (e.g. using linear algebra) and must be searched for by an optimization algorithm.
+
+      Optimization refers to the task of minimizing/maximizing an objective function f(x) parameterized by x. In machine/deep learning terminology, it’s the task of minimizing
+      the cost/loss function J(w) parameterized by the model’s parameters w ∈ R^d. Optimization algorithms (in case of minimization) have one of the following goals:
+
+      * Find the global minimum of the objective function. This is feasible if the objective function is convex, i.e. any local minimum is a global minimum.
+
+      * Find the lowest possible value of the objective function within its neighborhood. That’s usually the case if the objective function is not convex as the case in most deep 
+        learning problems.
+
+      Gradient Descent is the most common optimization algorithm in machine learning and deep learning. It is a first-order optimization algorithm. This means it only takes into account 
+      the first derivative when performing the updates on the parameters. On each iteration, we update the parameters in the opposite direction of the gradient of the objective function 
+      J(w) w.r.t the parameters where the gradient gives the direction of the steepest ascent. The size of the step we take on each iteration to reach the local minimum is determined by 
+      the learning rate α. Therefore, we follow the direction of the slope downhill until we reach a local minimum.
+
+      The main advantages which scaling provides in optimization using gradient descent algorithm are : -
+
+      * We can use fixed learning rate during training without worrying about learning rate decay.
+
+      * It has straight trajectory towards the minimum and it is guaranteed to converge in theory to the global minimum if the loss function is convex and to a local minimum if the loss 
+        function is not convex.
+
+      * It has unbiased estimate of gradients. The more the examples, the lower the standard error.
+
+
+
+13.  No, accuracy is not a good metric to measure the performance of the model because :-
+
+     
+     Standard accuracy is defined as the ratio of correct classifications to the number of classifications done.
+
+     accuracy : = correct classifications / number of classifications
+
+     It is thus an overall measure over all classes and as we'll shortly see it's not a good measure to tell an oracle apart from an actual useful test. An oracle is a classification function 
+     that returns a random guess for each sample. Likewise, we want to be able to rate the classification performance of our classification function. 
+
+     Accuracy can be a useful measure if we have the same amount of samples per class but if we have an imbalanced set of samples accuracy isn't useful at all. Even more so, a test can have a 
+     high accuracy but actually perform worse than a test with a lower accuracy.
+
+     If we have a distribution of samples such that 90% of samples belong to class A, 5% belonging to B and another 5% belonging to C then the following classification function will have an accuracy
+     of 0.9:
+
+     classify(sample) : = {A if T
+
+     Yet, it is obvious given that we know how classify works that this it can not tell the classes apart at all. Likewise, we can construct a classification function
+
+     classify(sample) : = guess A with p = 0.96,
+                          guess B with p = 0.02,
+                          guess C with p = 0.02
+
+     which has an accuracy of 0.96⋅0.9+0.02⋅0.05⋅2=0.866 and will not always predict A but still given that we know how classify works it is obvious that it can not tell classes apart.
+     Accuracy in this case only tells us how good our classification function is at guessing. This means that accuracy is not a good measure to tell an oracle apart from a useful test.
+
+
+14. "f-score" metric - The F1 score, also known as balanced F-score or F-measure
+
+     The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0. The relative contribution of 
+     precision and recall to the F1 score are equal. The formula for the F1 score is:
+
+     F1 = 2 * (precision * recall) / (precision + recall)
+
+     In the multi-class and multi-label case, this is the average of the F1 score of each class with weighting depending on the average parameter.
+
+15.  The difference between fit(), transform() and fit_transform() are :- 
+
+     * Transformers - Transformers are for pre-processing before modeling. The Imputer class (like SimpleImputer for filling in missing values) and FeatureSelection classes in sklearn are an example of 
+                      some transformers.
+
+     * Models   -     Models are used to make predictions like Linear Regression model, Decision Tree model, Random Forest model etc. We will usually pre-process our data (with transformers) before putting 
+                      it in a model.
+
+     Now the usage of methods fit(), transform(), fit_transform() and predict() depend on the type of object.
+
+     For Transformers:
+
+     * fit() - It is used for calculating the initial filling of parameters on the training data (like mean of the column values) and saves them as an internal objects state.
+
+     * transform() - Use the above calculated values and return modified training data.
+
+     * fit_transform() - It joins above two steps. Internally, it just calls first fit() and then transform() on the same data.
+
+    
+     For Models:
+
+     * fit() - It calculates the parameters/weights on training data (e.g. parameters returned by coef() in case of Linear Regression) and saves them as an internal objects state.
+
+     * predict() - Use the above calculated weights on test data to make the predictions.
+
+     * transform() - Cannot be used.
+
+     
+
+
+
+
+  
