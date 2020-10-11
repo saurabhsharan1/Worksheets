@@ -18,6 +18,8 @@
 
 7. (B) Bias will decrease, Variance increase
 
+8. (D) None of the above
+
 10. The advantages of Random Forests over Decision Tree :-
 
     * Briefly, although decision trees have a low bias / are non-parametric, they suffer from a high variance which makes them less useful for most practical applications.
