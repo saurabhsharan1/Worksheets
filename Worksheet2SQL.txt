@@ -1,0 +1,37 @@
+                                                                                          WORKSHEET-2
+                                                                                              SQL
+                                                                                            ANSWERS
+
+
+1.(D) Unique
+
+2.(D) None of them
+
+3.(A) Each entry in the primary key uniquely identifies each entry or row in the table
+
+4.(A) There should not be any duplicate entries
+
+5.(B) Foreign Key
+
+6.(D) 1
+
+7.(A) one to many
+
+8.(C) one to one
+
+9.(B) supplier id
+
+10.(D) 2
+
+11.(D) many to many
+
+12.(C) Table
+
+13.(A) Insert in to
+
+14.(B) Unique 
+   (C) Primary Key
+
+15.(A) A blood group can contain one of the following values - A, B, AB and O.
+   (C) A blood group cannot have null values
+   
