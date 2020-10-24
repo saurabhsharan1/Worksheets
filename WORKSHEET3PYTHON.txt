@@ -1,0 +1,27 @@
+                                                                                             WORKSHEET 3
+                                                                                               PYTHON
+                                                                                               ANSWERS
+
+1. (D) int(‘32’)
+
+2. (C) 4
+
+3. (B) (a**b)%c
+
+4. (A) <class ‘type’>
+
+5. (C) 65
+
+6. (D) Method
+
+7. (B) False
+
+8. (B) Sometimes
+
+9. (A) -68.7e100
+   (B) 42e3
+   (C) 4.2038
+   (D) 3.0
+
+10.(B) You can pass keyword arguments in any order. 
+     
