@@ -28,7 +28,23 @@
 10. (A) Overfitting
     (C) Underfitting
 
-11. 
+11. One-hot encoding is a particularly simple encoding scheme. When should we use it (or, perhaps more importantly, when should we avoid it)? One-hot encoding is a good choice for
+
+    * Problems with only a few "levels" (distinct values that a category can take, e.g. the number of species in our example)
+    * Linear models with any number of levels
+    * Problems where the different levels are known (or we are unlikely to encounter new levels on our testing set)
+
+Tree-based models, such as Decision Trees, Random Forests, and Boosted Trees, typically don't perform well with one-hot encodings with lots of levels. This is because they pick the 
+feature to split on based on how well that splitting the data on that feature will "purify" it. If we have a lot of levels, only a small fraction of the data (typically) will belong
+to any given level, so the one-hot encoded columns will be mostly zeros. Since splitting on this column will only produce a small gain, tree-based algorithms typically ignore the information
+in favor of other columns. This problem persists, regardless of the volume of data we actually have.
+
+Linear models don't suffer from this problem. Each level gets its own coefficient, so in statistics terms we are "using up a degree of freedom" for each level of our feature. This is a problem 
+with any encoding with many features, but with enough data, a linear model can support a large number of categories. A good solution to this problem if we have limited dataa is to see if we can 
+cluster some of our levels together.
+
+There is also a question of what to do if we encounter new levels on a new dataset. For some features, such as encoding Blood Type, we would know all the possible levels at the beginning of the problem: 
+AB+, AB-, A+, A-, B+, B-, O+, O-. For features such as Species, it is highly likely we will see new values on the testing set.  
 
 12. In case of data imbalance problem in classification, techniques which can be used to balance the dataset are : -
    
