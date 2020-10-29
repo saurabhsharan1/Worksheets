@@ -1,0 +1,26 @@
+                                                                                PYTHON – WORKSHEET 9 (PANDAS)
+                                                                                           ANSWERS
+
+1. (D) All of the above
+
+2. (A) True
+
+3. (D) All of the above
+
+4. (D) Error
+
+5. (C) 3 dimensional
+
+6. (D) 1
+
+7. (C) ix
+
+8. (B) value, size
+
+9. (B) Series can be passed into most NumPy methods expecting an ndarray.
+   (C) A key difference between Series and ndarray is that operations between Series automatically align the data based on label
+   (D) In pandas, Index values must be unique
+
+10. (A) JSON
+    (B) HTML
+    (C) CSV
