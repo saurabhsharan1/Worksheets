@@ -1,0 +1,27 @@
+                                                                               MACHINE LEARNING – WORKSHEET 6
+
+                                                                                             ANSWERS 
+
+
+1. (A) Yes
+
+2. (D) All of them are equal.
+
+3. (A) They allow misclassifications, that’s why they are not optimal
+   (B) They cannot be used when the data is not completely linearly separable while allowing no errors
+   (C) They are not optimal to use in case of outliers
+
+4. (D) All of the above
+
+5. (A) Yes
+
+6. (D) They can be used in case data is not completely linearly separable
+
+7. (D) All of the above
+
+8. (C) The data product values given by the kernel functions are used to find the classifier in the higher
+       dimensional space.
+
+9. (C) It is a model trained using supervised learning. It can be used for classification and regression.
+
+10. (D) All of the above
