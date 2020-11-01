@@ -1,0 +1,113 @@
+                                                                                   Statistics– WORKSHEET 4
+                                                                                           ANSWERS
+
+1. (a) True
+
+2. (a) Central Limit Theorem
+
+3. (b) Modeling bounded count data
+
+4. (d) All of the mentioned-
+
+5. (c) Poisson
+
+6. (b) False
+
+7. (b) Hypothesis
+
+8. (a) 0
+
+9. (c) Outliers cannot conform to the regression relationship
+
+10. Normal distribution, also known as the Gaussian distribution, is a probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in 
+    occurrence than data far from the mean. In graph form, normal distribution will appear as a bell curve. The normal distribution is often called the bell curve because the graph of 
+    its probability density looks like a bell. 
+
+    A normal distribution is the proper term for a probability bell curve.
+
+    In a normal distribution the mean is zero and the standard deviation is 1. It has zero skew and a kurtosis of 3.
+
+    Normal distributions are symmetrical, but not all symmetrical distributions are normal.
+
+    In reality, most pricing distributions are not perfectly normal.
+
+11. Missing data is caused either due to issues in data collection or sometimes, the data model could allow for missing data.With missing data, typically the ML algorithm implementation 
+    might fail with an error due to unexpected values / blanks in the data set. Hence missing data must be dealt with before applying an ML algorithm.
+
+    There is no fixed rule to deal with missing data but one could use any of the heuristics mentioned below. 
+
+    * The most common way of dealing with missing data is to remove all rows with missing data if there are not too many rows with missing data.
+
+    * If more than 50-60% of rows of a specific column are missing data, it is common to remove the column. The main problem with removing missing data thus, is that it could  introduce 
+      substantial bias.
+
+   Imputation of data is also a common technique used  to deal with missing data where the data is substituted with the best guess.
+
+    * Imputation with mean : Missing data is replaced by the mean of the column.  This is a commonly used technique. However, this might not be appropriate if  the data is not unimodal 
+      (for example suppose we fill missing value of weights, the mean of weights for males might be different from females and this might not be a unimodal distribution).
+
+    * Imputation with median : Missing data is replaced by the median of the column. A median is better than the mean when there are outliers, but once again, if the data is multi-model 
+      with multiple clusters, median might not work.
+
+    * Imputation with Mode: Missing data is replaced with mode of the column. This also leads to similar problems as the above two methods.
+
+    * Imputation with linear regression : With real valued data, this is another common technique. The missing value is replaced by performing linear regression based on the other feature 
+      values.This overcomes the problems with the above simpler forms of imputation. 
+
+
+12. A/B testing (also known as split testing) is a process of showing two variants of the same web page to different segments of website visitors at the same time and comparing which variant 
+    drives more conversions.
+
+    A/B testing (also known as split testing or bucket testing) is a method of comparing two versions of a webpage or app against each other to determine which one performs better. AB testing 
+    is essentially an experiment where two or more variants of a page are shown to users at random, and statistical analysis is used to determine which variation performs better for a given 
+    conversion goal.
+
+13. * Bad practice in general
+
+    * If just estimating means: mean imputation preserves the mean of the observed data
+
+    * Leads to an underestimate of the standard deviation
+
+    * Distorts relationships between variables by “pulling” estimates of the correlation toward zero
+
+14. In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
+    The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression.This term is distinct from multivariate 
+    linear regression, where multiple correlated dependent variables are predicted, rather than a single scalar variable.
+
+    In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. Such models are called linear models. Most commonly, the 
+    conditional mean of the response given the values of the explanatory variables (or predictors) is assumed to be an affine function of those values; less commonly, the conditional median or some other quantile
+    is used.  Like all forms of regression analysis, linear regression focuses on the conditional probability distribution of the response given the values of the predictors, rather than on the joint probability 
+    distribution of all of these variables, which is the domain of multivariate analysis.
+
+15. The two branches of statistics are descriptive statistics and inferential statistics. All these branches of statistics follow a specific scientific approach which makes them equally essential to every statistics 
+    student.
+
+    * Descriptive Statistics - Descriptive statistics is considered as the first part of statistical analysis which deals with collection and presentation of data. Scientifically, descriptive statistics can be defined
+      as brief explanatory coefficients that are used by statisticians to summarize a given data set. Generally, a data set can either represent a sample of a population or the entire populations. Descriptive statistics
+      can be categorized into
+
+     - Measures of central tendency
+
+     - Measures of variability
+
+    * Inferential Statistics - Inferential statistics are techniques that enable statisticians to use the gathered information from a sample to make inferences, decisions or predictions about a given population. 
+      Inferential statistics often talks in probability terms by using descriptive statistics. These techniques are majorly used by statisticians to analyze data, make estimates and draw conclusions from the limited
+      information which is obtained by sampling and testing how reliable the estimates are. The different types of calculation of inferential statistics include:
+
+     - Regression analysis
+
+     - Analysis of variance (ANOVA)
+
+     - Analysis of covariance (ANCOVA)
+
+     - Statistical significance (t-test)
+
+     - Correlation analysis
+
+
+
+
+    
+
+
+
