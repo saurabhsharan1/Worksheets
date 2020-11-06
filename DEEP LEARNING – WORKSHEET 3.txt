@@ -1,0 +1,104 @@
+                                                                                DEEP LEARNING – WORKSHEET 3
+                                                                                           ANSWERS
+
+
+
+
+1. (B) As number of hidden layers increase, model capacity increases
+
+2. (C) It normalizes (changes) all the input before sending it to the next layer
+
+3. (A) Network will not converge
+
+4. (D) All of these
+
+5. (C) (-4, -4, 3)
+
+6. (B) Simulate the network on a test dataset after every epoch of training. Stop training when the generalization
+       error starts to increase
+
+7. (B) Stochastic Gradient Descent
+
+8. (A) Freeze all the layers except the last, re-train the last layer
+
+9. (A) Overfitting
+   (B) Training is too slow
+   (C) Restrict activations to become too high or low
+
+10. (A) ReLU
+    (B) sigmoid
+    (C) softmax
+    (D) Leaky ReLU
+
+11. We understand that using an activation function introduces an additional step at each layer during the forward propagation. Now the question is – if the activation function increases 
+    the complexity so much, can we do without an activation function? So for that we need to imagine a neural network without the activation functions. In that case, every neuron will only 
+    be performing a linear transformation on the inputs using the weights and biases. Although linear transformations make the neural network simpler, but this network would be less powerful 
+    and will not be able to learn the complex patterns from the data.
+
+   "A neural network without an activation function is essentially just a linear regression model."
+
+    Thus we use a non linear transformation to the inputs of the neuron and this non-linearity in the network is introduced by an activation function.
+
+12. Forward propagation -  Forward implies moving ahead and propagation is a term for saying spreading of anything. Forward propagation means we are moving in only one direction, from input
+    to the output, in a neural network.
+
+    How does forward propagation work - As the name suggests, the input data is fed in the forward direction through the network. Each hidden layer accepts the input data, processes it as per
+    the activation function and passes to the successive layer.
+
+    Backpropagation - Backpropagation, short for "backward propagation of errors," is an algorithm for supervised learning of artificial neural networks using gradient descent. Given an artificial
+    neural network and an error function, the method calculates the gradient of the error function with respect to the neural network's weights.
+
+    How does Backpropagation work - Back-propagation is just a way of propagating the total loss back into the neural network to know how much of the loss every node is responsible for, and 
+    subsequently updating the weights in such a way that minimizes the loss by giving the nodes with higher error rates lower weights and vice versa.
+
+
+13. * Stochastic Gradient Descent -  The word 'stochastic' means a system or a process that is linked with a random probability. Hence, in Stochastic Gradient Descent, a few samples are selected randomly
+      instead of the whole data set for each iteration. 
+
+      The word ‘stochastic‘ means a system or a process that is linked with a random probability. Hence, in Stochastic Gradient Descent, a few samples are selected randomly instead of the whole data set 
+      for each iteration. In Gradient Descent, there is a term called “batch” which denotes the total number of samples from a dataset that is used for calculating the gradient for each iteration. In typical 
+      Gradient Descent optimization, like Batch Gradient Descent, the batch is taken to be the whole dataset. Although, using the whole dataset is really useful for getting to the minima in a less noisy and 
+      less random manner, but the problem arises when our datasets gets big.
+
+      Suppose, we have a million samples in our dataset, so if we use a typical Gradient Descent optimization technique, we will have to use all of the one million samples for completing one iteration while 
+      performing the Gradient Descent, and it has to be done for every iteration until the minima is reached. Hence, it becomes computationally very expensive to perform.
+
+    * Batch Gradient Descent - In Batch Gradient Descent, all the training data is taken into consideration to take a single step. We take the average of the gradients of all the training examples and then 
+      use that mean gradient to update our parameters. So that’s just one step of gradient descent in one epoch.
+
+      Batch Gradient Descent is great for convex or relatively smooth error manifolds.
+
+    * Mini batch gradient descent - Mini-batch gradient descent is a variation of the gradient descent algorithm that splits the training dataset into small batches that are used to calculate model error and 
+      update model coefficients. Implementations may choose to sum the gradient over the mini-batch which further reduces the variance of the gradient.
+
+
+14. Main benefits of Mini-batch Gradient Descent : - 
+
+    * High throughput: With mini-batch one can process a large number of input examples per second. The mini batching style of gradient descent is perhaps the only way to use the large 
+      number of cores at once in a GPU (Graphics Processing Unit).
+    
+    * (Sometimes) faster convergence: The high througput may also translate to faster convergence depending on the variance in the dataset and the learning rate used.
+
+    * High quality gradient: Mini batching allows for a high quality gradient and this will be really useful allowing one to use high learning rates.
+
+    Also : -
+
+    * Easily fits in the memory.
+
+    * It is computationally efficient.
+
+    * Benefit from vectorization.
+
+    * If stuck in local minimums, some noisy steps can lead the way out of them.
+
+    * Average of the training samples produces stable error gradients and convergence.
+
+
+15.  Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+     
+     It is a popular approach in deep learning where pre-trained models are used as the starting point on computer vision and natural language processing tasks given the vast compute and time resources required
+     to develop neural network models on these problems and from the huge jumps in skill that they provide on related problem.
+
+
+
+    
