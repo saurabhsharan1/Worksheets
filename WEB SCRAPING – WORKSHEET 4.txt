@@ -1,0 +1,79 @@
+                                                                                   WEB SCRAPING – WORKSHEET 4
+                                                                                             
+                                                                                             ANSWERS
+
+
+1.  (B) get_element_by_name()
+
+2.  (C) find_element_by_tag_name()
+
+3.  (C) Both of them
+
+4.  (D) All of the above
+
+5.  (B) Very Slow
+    (C) External Pyhton Dependency 
+
+6.  (D) All of the above
+
+7.  (D) both A & B
+
+8.  (C) Hyper Text Markup Language
+
+9.  (B) soup=BeautifulSoup(html_doc,’html.parser’)
+
+10. (D) “html-xml”
+
+11. (C) find_next()
+
+12. (D) None of the above
+
+13. (C) limit 
+
+14. (B) recursive = False
+
+15.  find()： - Gets the first tag of the incoming HTML object that satisfies the condition and returns. A function of a label group or a single label.
+
+               Prototype: find(tag, atributes, recursive, text, keywords)
+
+               Parameter tag:Indicates the type of tag we need to find. There can be multiple tags.
+               Such as:
+
+               1.findAll({'h1'}) #return the list of h1 tags
+               2.findAll({'h1','h2','h3'}) #return h1-h3 title tag list
+               3.findAll({'h1','h2','h3','h4','h5','h6','h7'}) #return all lists of title tags
+               
+               Parameter attributes:The tag search is performed by using the attribute value corresponding to several attributes in the tag, and the attribute value may be multiple.
+
+               note:
+
+               We can search for CSS class, this string using soup.find("tagName", { "class" : "cssClass" })The default value is the parameter value of the CSS class.
+
+               Such as:
+
+               .findAll('span',{'class':{'green','red'}}) #return the list of span tags whose class attribute is red and green.
+              
+
+     findAll()： - Get all the conditions of the incoming HTML object and return it.
+
+                  Prototype: findAll(tag, atributes, recursive, text, limit, keywords)
+
+                  Parameter tag:Indicates the type of tag we need to find. There can be multiple tags.
+
+                  Such as:
+
+                  1.findAll({'h1'}) #return the list of h1 tags
+                  2.findAll({'h1','h2','h3'}) #return h1-h3 title tag list
+                  3.findAll({'h1','h2','h3','h4','h5','h6','h7'}) #return all lists of title tags
+
+                  Parameter attributes:The tag search is performed by using the attribute value corresponding to several attributes in the tag, and the attribute value may be multiple.
+
+                  note:
+
+                  We can search for CSS class, this string using soup.find("tagName", { "class" : "cssClass" })The default value is the parameter value of the CSS class.
+
+                  Such as:
+
+                  .findAll('span',{'class':{'green','red'}}) #return the list of span tags whose class attribute is red and green.
+
+
