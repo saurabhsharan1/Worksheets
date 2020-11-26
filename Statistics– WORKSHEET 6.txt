@@ -139,3 +139,4 @@
      The one-way ANOVA can help us to know whether or not there are significant differences between the means of our independent variables (such as the first example: age, sex, income). When we understand
      how each independent variable’s mean is different from the others, we can begin to understand which of them has a connection to our dependent variable (landing page clicks), and begin to learn what is
      driving that behavior.
+
