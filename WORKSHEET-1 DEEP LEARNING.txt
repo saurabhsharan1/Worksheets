@@ -1,0 +1,121 @@
+                                                                                          WORKSHEET-1
+
+                                                                                         DEEP LEARNING
+
+                                                                                            ANSWERS
+
+
+1. (B) Neural Networks
+
+2. (D) None of the above
+
+3. (C) i – v – iv – iii – ii
+
+4. (A) Recurrent Neural Network
+
+5. (A) input pattern keeps on changing
+
+6. (C) dynamic inputs & categorization can’t be handled
+
+7. (B) Statement 2 is true while statement 1 is false
+
+8. (A) Recurrent Neural network
+
+9. (A) Learning Rate is low
+
+   (B) Regularisation parameter is high
+
+   (D) Stuck at local minima
+
+10. (B) Rectified Linear Unit
+
+11. Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example. Deep learning is a key technology behind driverless cars, 
+    enabling them to recognize a stop sign, or to distinguish a pedestrian from a lamppost. It is the key to voice control in consumer devices like phones, tablets, TVs, and hands-free 
+    speakers. Deep learning is getting lots of attention lately and for good reason. It’s achieving results that were not possible before.
+
+    In deep learning, a computer model learns to perform classification tasks directly from images, text, or sound. Deep learning models can achieve state-of-the-art accuracy, sometimes 
+    exceeding human-level performance. Models are trained by using a large set of labeled data and neural network architectures that contain many layers.
+
+12. Reinforcement learning is the training of machine learning models to make a sequence of decisions. The agent learns to achieve a goal in an uncertain, potentially complex environment. 
+    In reinforcement learning, an artificial intelligence faces a game-like situation.The computer employs trial and error to come up with a solution to the problem. To get the machine to 
+    do what the programmer wants, the artificial intelligence gets either rewards or penalties for the actions it performs. Its goal is to maximize the total reward.
+
+    Although the designer sets the reward policy–that is, the rules of the game–he gives the model no hints or suggestions for how to solve the game. It’s up to the model to figure out how 
+    to perform the task to maximize the reward, starting from totally random trials and finishing with sophisticated tactics and superhuman skills.By leveraging the power of search and many
+    trials, reinforcement learning is currently the most effective way to hint machine’s creativity. In contrast to human beings, artificial intelligence can gather experience from thousands 
+    of parallel gameplays if a reinforcement learning algorithm is run on a sufficiently powerful computer infrastructure.
+
+13. Difference Between Machine Learning and Deep Learning :-
+
+    Machine Learning: Machine learning is a subset, an application of Artificial Intelligence (AI) that offers the ability to the system to learn and improve from experience without being programmed 
+    to that level. Machine Learning uses data to train and find accurate results. Machine learning focuses on the development of a computer program that accesses the data and uses it to learn from themselves.
+
+    
+    Deep Learning: Deep Learning is a subset of Machine Learning where the artificial neural network, the recurrent neural network comes in relation. The algorithms are created exactly just like machine learning
+    but it consists of many more levels of algorithms. All these networks of the algorithm are together called as the artificial neural network. In much simpler terms, it replicates just like the human brain as 
+    all the neural networks are connected in the brain, exactly is the concept of deep learning. It solves all the complex problems with the help of algorithms and its process.
+
+
+
+    S.NO.                     MACHINE LEARNING                                                           DEEP LEARNING
+
+
+    1.                        Machine Learning is a superset of Deep Learning.                           Deep Learning is a subset of Machine Learning.
+
+    2.                        The data represented in Machine Learning is quite                          The data representation is used in Deep Learning 
+                              different as compared to Deep Learning as it uses                          is quite different as it uses neural networks(ANN).
+                              structured data.
+    
+    3.                        Machine Learning is an evolution of AI.                                    Deep Learning is an evolution to Machine Learning.                    
+                                                                                                         Basically it is how deep is the machine learning.  
+
+    4.                        Machine learning consists of thousands of data points.                     Big Data: Millions of data points.
+
+
+    5.                        Outputs: Numerical Value, like classification of score.                    Anything from numerical values to free-form elements, 
+                                                                                                         such as free text and sound.
+
+
+
+14. A Perceptron is an algorithm used for supervised learning of binary classifiers. Binary classifiers decide whether an input, usually represented by a series of vectors, belongs to a specific class.
+    In short, a perceptron is a single-layer neural network. They consist of four main parts including input values, weights and bias, net sum, and an activation function.
+
+    As a simplified form of a neural network, specifically a single-layer neural network, perceptrons play an important role in binary classification. This means the perceptron is used to classify data
+    into two parts, hence binary. Sometimes, perceptrons are also referred to as linear binary classifiers for this reason.
+
+15. Difference between Artificial Intelligence and Machine learning :- 
+
+    Artificial Intelligence : The word Artificial Intelligence comprises of two words “Artificial” and “Intelligence”. Artificial refers to something which is made by human or non natural thing and Intelligence 
+    means ability to understand or think. There is a misconception that Artificial Intelligence is a system, but it is not a system .AI is implemented in the system. There can be so many definition of AI, one 
+    definition can be “It is the study of how to train the computers so that computers can do things which at present human can do better.”Therefore It is a intelligence where we want to add all the capabilities 
+    to machine that human contain.
+
+
+    Machine Learning : Machine Learning is the learning in which machine can learn by its own without being explicitly programmed. It is an application of AI that provide system the ability to automatically learn
+    and improve from experience. Here we can generate a program by integrating input and output of that program. One of the simple definition of the Machine Learning is “Machine Learning is said to learn from 
+    experience E w.r.t some class of task T and a performance measure P if learners performance at the task in the class as measured by P improves with experiences.”
+
+    The key difference between AI and ML are:
+
+
+    S.NO.                                      ARTIFICIAL INTELLIGENCE                                                                                  MACHINE LEARNING
+
+     1.                                        AI stands for Artificial intelligence, where intelligence is defined                                     ML stands for Machine Learning which is defined 
+                                               acquisition of knowledge intelligence is defined as a ability to acquire                                 as the acquisition of knowledge or skill.
+                                               and apply knowledge.
+
+
+     2.                                        The aim is to increase chance of success and not accuracy.                                               The aim is to increase accuracy, but it does not 
+                                                                                                                                                        care about success.
+
+
+     3.                                        It work as a computer program that does smart work.                                                      It is a simple concept machine takes data and learn 
+                                                                                                                                                        from data.
+
+
+     4.                                        AI is decision making.                                                                                   ML allows system to learn new things from data.
+
+
+     5.                                        AI leads to intelligence or wisdom.                                                                      ML leads to knowledge.
+
+
