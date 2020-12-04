@@ -1,0 +1,35 @@
+                                                                        MACHINE LEARNING – WORKSHEET 8 (REGRESSION)
+
+                                                                                     ANSWERS
+
+1.  (B) Є can be either or negative
+    (C) Є is the error which is introduced because there may be some predictor variables apart from the given
+        variable which are effecting the response variable
+
+2.  (A) It covers up the errors introduced because of the variables which are not present in the given predictors set
+        X but they are influencing the response variable.
+    (B) It also covers up the measurement errors in the response variable.
+    (C) It covers up the error introduced because we can never find the exact or true f(X).
+
+3.  (A) The distribution of random error will be Gaussian.
+    (C) The random error will be dependent on X.
+
+4.  (A) To predict the sales of a product based on the marketing budget on different media like TV, Newspaper,
+       Radio, etc.
+
+    (C) To predict the stock price of a company based on the previous stocks prices.
+
+5.  (D) All of the above
+
+6.  (B) Least Squares Method
+
+7.  (A) y1 = Β*x1 + C, where B and C are parameters.
+    (B) y1 = B where B is a parameter
+
+8.  (A) Linear function of AGE
+    (B) Polynomial function of AGE with degree>1
+
+9.  (D) None of the above
+
+10. (A) Pearson Correlation Coefficient P = 1
+    (C) Spearman correlation coefficient = 1
