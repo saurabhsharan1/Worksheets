@@ -41,8 +41,6 @@
 
          * Here the order in which the elements are added into the set is not fixed, it can change frequently.
 
-
-
          * It is defined under curly braces{}
 
          * Sets are mutable, however, only immutable objects can be stored in it.
