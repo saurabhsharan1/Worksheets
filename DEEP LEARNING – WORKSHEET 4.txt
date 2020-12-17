@@ -1,0 +1,124 @@
+                                                                                   DEEP LEARNING – WORKSHEET 4
+
+                                                                                             ANSWERS
+
+
+1. (A) Once we have the pooled feature map, this component transforms the information into a vector. It's the
+      input we need to get on with Artificial Neural Networks.
+
+2. (B) Little dependence on pre-processing, decreasing the needs of human effort developing its functionalities.
+
+3. (B) False
+
+4. (D) 3 – 1 – 5 – 4 – 2
+
+5. (A) C = {(I-F+2P)/ S} + 1
+
+6. (A) 
+
+7. (A) 8×8
+
+8. (D)
+
+9. (A) larger the value of strides, larger is the size of feature map we get
+   (B) larger the value of strides, smaller is the size of feature map we get
+   (D) smaller the value of strides, smaller is the size of feature map we get
+
+10. (A) ResNeXt-50
+    (B) Inception-ResNets
+    (C) LeNet-5
+
+11. CNNs are a class of Deep Neural Networks that can recognize and classify particular features from images and are widely used for analyzing visual images. Their applications range from 
+    image and video recognition, image classification, medical image analysis, computer vision and natural language processing.
+
+    Basic architecture of a CNN : -
+   
+    There are two main parts to a CNN architecture
+
+    * A convolution tool that separates and identifies the various features of the image for analysis in a process called as Feature Extraction.
+
+    * A fully connected layer that utilizes the output from the convolution process and predicts the class of the image based on the features extracted in previous stages.
+
+    Convolution Layers
+
+    There are three types of layers that make up the CNN which are the convolutional layers, pooling layers, and fully-connected (FC) layers. When these layers are stacked, a CNN architecture
+    will be formed. In addition to these three layers, there are two more important parameters which are the dropout layer and the activation function which are defined below. 
+
+    1. Convolutional Layer - This layer is the first layer that is used to extract the various features from the input images. In this layer, the mathematical operation of convolution is performed 
+       between the input image and a filter of a particular size MxM. By sliding the filter over the input image, the dot product is taken between the filter and the parts of the input image with 
+       respect to the size of the filter (MxM).The output is termed as the Feature map which gives us information about the image such as the corners and edges. Later, this feature map is fed to other 
+       layers to learn several other features of the input image.
+
+    2. Pooling Layer - In most cases, a Convolutional Layer is followed by a Pooling Layer. The primary aim of this layer is to decrease the size of the convolved feature map to reduce the computational
+       costs. This is performed by decreasing the connections between layers and independently operates on each feature map. Depending upon method used, there are several types of Pooling operations.
+
+       In Max Pooling, the largest element is taken from feature map. Average Pooling calculates the average of the elements in a predefined sized Image section. The total sum of the elements in the predefined
+       section is computed in Sum Pooling. The Pooling Layer usually serves as a bridge between the Convolutional Layer and the FC Layer.
+
+    3. Fully Connected Layer - The Fully Connected (FC) layer consists of the weights and biases along with the neurons and is used to connect the neurons between two different layers. These layers are usually
+       placed before the output layer and form the last few layers of a CNN Architecture.
+
+       In this, the input image from the previous layers are flattened and fed to the FC layer. The flattened vector then undergoes few more FC layers where the mathematical functions operations usually take place. 
+       In this stage, the classification process begins to take place.
+
+    4. Dropout - Usually, when all the features are connected to the FC layer, it can cause overfitting in the training dataset. Overfitting occurs when a particular model works so well on the training data causing a 
+       negative impact in the model’s performance when used on a new data.
+
+       To overcome this problem, a dropout layer is utilised wherein a few neurons are dropped from the neural network during training process resulting in reduced size of the model. On passing a dropout of 0.3, 30% of
+       the nodes are dropped out randomly from the neural network.
+
+    5. Activation Functions - Finally, one of the most important parameters of the CNN model is the activation function. They are used to learn and approximate any kind of continuous and complex relationship between 
+       variables of the network. In simple words, it decides which information of the model should fire in the forward direction and which ones should not at the end of the network.
+
+       It adds non-linearity to the network. There are several commonly used activation functions such as the ReLU, Softmax, tanH and the Sigmoid functions. Each of these functions have a specific usage. For a binary 
+       classification CNN model, sigmoid and softmax functions are preferred an for a multi-class classification, generally softmax us used.
+
+
+12. The term ‘Convolution” in CNN denotes the mathematical function of convolution which is a special kind of linear operation wherein two functions are multiplied to produce a third function which expresses how the 
+    shape of one function is modified by the other. In simple terms, two images which can be represented as matrices are multiplied to give an output that is used to extract features from the image.
+
+    Convolution is a simple mathematical operation which is fundamental to many common image processing operators. Convolution provides a way of `multiplying together' two arrays of numbers, generally of different sizes, 
+    but of the same dimensionality, to produce a third array of numbers of the same dimensionality.This can be used in image processing to implement operators whose output pixel values are simple linear combinations of 
+    certain input pixel values.
+
+    In an image processing context, one of the input arrays is normally just a graylevel image. The second array is usually much smaller, and is also two-dimensional (although it may be just a single pixel thick), and is
+    known as the kernel.
+
+    The convolution is performed by sliding the kernel over the image, generally starting at the top left corner, so as to move the kernel through all the positions where the kernel fits entirely within the boundaries of 
+    the image. Each kernel position corresponds to a single output pixel, the value of which is calculated by multiplying together the kernel value and the underlying image pixel value for each of the cells in the kernel, 
+    and then adding all these numbers together.
+
+13.  Max pooling selects the brighter pixels from the image. It is useful when the background of the image is dark and we are interested in only the lighter pixels of the image.
+     Average pooling method smooths out the image and hence the sharp features may not be identified when this pooling method is used.
+
+     Max pooling extracts the most important features like edges whereas, average pooling extracts features so smoothly. Average pooling sometimes can't extract good features because 
+     it takes all into count and results an average value which may/may not be important for object detection type tasks.
+
+
+14.  Padding is a term relevant to convolutional neural networks as it refers to the amount of pixels added to an image when it is being processed by the kernel of a CNN. For example, 
+     if the padding in a CNN is set to zero, then every pixel value that is added will be of value zero. If, however, the zero padding is set to one, there will be a one pixel border 
+     added to the image with a pixel value of zero.
+
+     Padding is simply a process of adding layers of zeros to our input images so as to avoid the problems mentioned above. This prevents shrinking as, if p = number of layers of zeros 
+     added to the border of the image, then our (n x n) image becomes (n + 2p) x (n + 2p) image after padding.
+
+     There are couple of reasons padding is important: It's easier to design networks if we preserve the height and width and don't have to worry too much about tensor dimensions when 
+     going from one layer to another because dimensions will just "work". Without padding, reduction in volume size would reduce too quickly.
+
+
+15.  CNNs have an input layer, and output layer, and hidden layers. The hidden layers usually consist of convolutional layers, ReLU layers, pooling layers, and fully connected layers.
+    
+    * Convolutional layers apply a convolution operation to the input.This passes the information on to the next layer.
+
+    * Pooling combines the outputs of clusters of neurons into a single neuron in the next layer.
+
+    * Fully connected layers connect every neuron in one layer to every neuron in the next layer.
+
+    In a convolutional layer, neurons only receive input from a subarea of the previous layer. In a fully connected layer, each neuron receives input from every element of the previous layer.
+
+
+
+
+
+
+
